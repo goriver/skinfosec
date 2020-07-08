@@ -34,5 +34,13 @@ while(1):
             if ai["name"]==corr_stu:
                 ai["age"]=c_age
                 ai["major"]=c_major
+        """ 강사님 코드
+        for i, ai in enumerate(ai_list):
+            if ai["name"]==name:
+                ai["age"]=c_age
+                ai["major"]=c_major
+                print(ai["name"],"의 이름이 변경되었습니다."])
+                break
+        """
     else:
         break
