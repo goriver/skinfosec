@@ -30,7 +30,7 @@ while True:
             }
         ai_list.append(dict_st)        
     elif choice ==2:
-        print(enumerate(ai_list))
+        print(list(enumerate(ai_list)))
     elif choice ==3:
         del_name = input("삭제할 이름을 입력하세요")
         for ai in ai_list:
@@ -38,11 +38,15 @@ while True:
                 del ai[del_name]         
     elif choice ==4:
         corr_name = input("수정할 이름을 입력하세요")
-        
         for ai in ai_list:
-            if corr_name in ai.keys():
+            if corr_name in ai.keys(): # 전제 : 
                 age = input("수정할 나이")
                 major = input("수정할 전공")
                 ai[corr_name] = [age,major] 
+            """ 루다's dict안에 name, age, major 다 있음
+            if(ai["name" == corr_namecorr_name):
+                del ai_list[ai_list.index(i)]
+                index(x) 함수는 리스트에 x 값이 있으면 x의 위치 값을 돌려준다.
+            """
     elif choice ==5:
         break
