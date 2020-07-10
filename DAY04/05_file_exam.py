@@ -9,7 +9,7 @@ def register(ai_dictionary):
 def start():
     # for i, name in enumerate(ai_list):
     #     print("{0}번째 학생 : {1}\n".format(i,ai_list[i])) 
-    stu_file = open("stu_list.txt","r")
+    stu_file = open("stu_list.txt","r",encoding='UTF8')
     lines = stu_file.readlines()
     for line in lines:
         # for i,li in enumerate(line):
@@ -41,7 +41,7 @@ def ai_search(name):
 
 def save_list(ai_list):
     for ai in enumerate(ai_list):
-        with open("stu_list.txt","a") as file:
+        with open("stu_list.txt","w") as file:
             file.write(ai)
 
 start()

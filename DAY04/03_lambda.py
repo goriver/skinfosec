@@ -18,8 +18,8 @@ print("after ",original_list)
 """
 print("================매개변수에 함수 호출===============")
 
-# def increase(value):
-    # return value+10
+def increase(value):
+    return value+10
 
 def decrease(value):
     return value-10
