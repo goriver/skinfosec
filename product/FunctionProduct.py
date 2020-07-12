@@ -15,12 +15,12 @@ def products(prod_list):
     for prod in prod_list:
         print(prod)
 
-#제품번호수정 : 제품번호검색 날짜, 브랜드 수정하고 message 리턴
+#제품번호수정 : 제품번호검색 가격, 브랜드 수정하고 message 리턴
 def prod_update(prod_dic,prod_list):
     index = is_exist(prod_dic["prod_num"],prod_list)
     if index > -1 : 
         prod =prod_list[index] # prod 는 dictionary
-        prod["date"] = prod_dic["date"]
+        prod["price"] = prod_dic["price"]
         prod["brand"] = prod_dic["brand"]
         print(prod_dic["prod_num"],"이 수정되었습니다.")
         print(prod_list)
