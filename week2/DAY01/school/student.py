@@ -3,12 +3,14 @@ class Person:
         self.id = id
         self.name = name
     
+    # eq
+    # 같은지 출력한다
     def __eq__(self,id):
         if(self.id == id):
             return True
         else:
             return False
-            
+
     def info(self): 
         print("아이디:{0}\t이름:{1}".format(self.id,self.name),end = "")
     # def __str__(self): info대신 __str__로 쓸 수 있당 
@@ -68,3 +70,4 @@ class Employee(Person):
 
 
 """
+
