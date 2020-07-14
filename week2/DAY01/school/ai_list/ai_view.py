@@ -16,8 +16,8 @@ def message_display(message):
 
 # ai_list 목록 출력
 def ai_list_display(ai_list):
-    for index, value in ai_list:
-        print("{0}번째 : {1}".format(index, str(value)))
+    for index, ai_entity in ai_list:
+        print("{0}번째 : {1}".format(index, str(ai_entity)))
 
 # ai_entity 상세정보 출력
 def ai_entity_display(ai_entity):

@@ -2,6 +2,11 @@ from ai_view import message_display, ai_list_display,ai_entity_display
 import service
 # view 입력된 데이터 체크, service의 business method 호출, 호출된 결과값 저장, view select
 class AIController:
+
+    # def __init__(self):
+    #   super().__init__()
+
+
     def register_controller(self, ai_entity):
         # email vaild check - regular express사용 email형식 체크
         if (ai_entity.email == "" ) or (len(ai_entity.email) == 0):
@@ -14,8 +19,8 @@ class AIController:
 
     def get_all_entity_controller(self):
         bm = service.AIService()
-        ai_list = bm.get_all_entity()
-        ai_list_display(ai_list)
+        bm_list = bm.get_all_entity()
+        ai_list_display(bm_list)
 
     def ai_entity_update_controller(self,ai_entity):
         if (ai_entity.email == "" ) or (len(ai_entity.email) == 0):
@@ -45,3 +50,10 @@ class AIController:
             else:
                 message_display("해당되는 데이터가 존재하지 않습니다.")
 
+    def file_read(self):
+        bm = service.AIService()
+        bm.read_list()
+
+    def file_write(self):
+        bm = service.AIService() # service파일의 AIService()
+        bm.save_list()

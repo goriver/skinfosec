@@ -1,5 +1,6 @@
 from ai_exception import DuplicateException, RecordNotFoundException
 from domain import AIEntity
+from filestore import save_data, read_data
 
 class AIService:
     # AIEntity 정보를 저장하는 클래스 변수
@@ -71,3 +72,11 @@ class AIService:
                 return index
         return -1
 
+    #file store 저장
+    def save_list(self):
+        save_data(AIService.ai_list)
+
+    def read_list(self):
+        AIService.ai_list = read_data()
+
+# python 객체(생성자)는 변수로 지정할 땨마다 초기화된다,
