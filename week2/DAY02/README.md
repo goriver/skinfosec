@@ -6,8 +6,8 @@
 * 마크다운은 jupyter의 마크다운 사용하면 편하당
 
 ## docker 설치 및 운영 계획
-* ![image](/uploads/4acbd46102919f769b48312216fc0111/image.png)
-* ![image](/uploads/d21cee4a3aec09bf754f83bb1081ce35/image.png)
+![image](/uploads/4acbd46102919f769b48312216fc0111/image.png)
+![image](/uploads/d21cee4a3aec09bf754f83bb1081ce35/image.png)
 * image는 issue에 클립보드 경로 복붙하고 링크 받아와서 걸어둔다
 
 ## docker 특징
@@ -50,10 +50,10 @@
     * 2개 이상의 서로 다른 네트워크 간을 중계하기 우한 통신 장비
 
 ### OS 기초 지식
-* ![image](/uploads/db2972022aff15918cee80d91623612f/image.png)
+![image](/uploads/db2972022aff15918cee80d91623612f/image.png)
     * SHELL : 리눅스 커넬 관리
         -사용자가 명령을 내려서 수행을 하기 위해서는 COMMAND가 필요한데, 해당 COMMAND의 모음을 SHELL이라고 한다.
-    * ![image](/uploads/8168dc73b34e1285093a0c65882cf262/image.png)
+    ![image](/uploads/8168dc73b34e1285093a0c65882cf262/image.png)
     * is-al치면 위 제품이 나온다.
     * 리눅스 용어의 신기함...다경언니 전공분야이다.bbbbb크~bbbbb
     * 
@@ -72,7 +72,7 @@
 
 ### 컨테이너 기술의 개요
 ### docker의 개요
-* ![image](/uploads/4c370b10c1b5490621d157f195ed1e2e/image.png)
+![image](/uploads/4c370b10c1b5490621d157f195ed1e2e/image.png)
 * 모두 동일한 환경이 아닐 경우 힘들게 된다.
 * 따라서 docker에 환경 세팅해서 해당 환경을 docker에 올린다.
 * 이미지는 변경 불가능하다. -> immutable
@@ -88,11 +88,11 @@
     * docker 이미지는 docker 레지스트리에서 공유 가능
 3. run
     * __dockr 이미지를 작동시키는 기능__
-* ![image](/uploads/8ded5d5bac59e8d650d4c1191526c1f5/image.png)
+![image](/uploads/8ded5d5bac59e8d650d4c1191526c1f5/image.png)
     * dockr engine을 통해서 하게 될 것이다.
 
 ### docker의 작동 구조
-1. 
+1. namespace
 * __namespace__
 * 리눅스 기술의 기본 기술 중 하나.
 * 이런 공간을 활용해 PID namespace, Network namespace, UID namespace, 등등의 기술 활용 -> 쿠버네틱스를 통해 사용됨
@@ -105,6 +105,10 @@
 
 # 제 3장 Docker 설치와 튜토리얼
 ''' docker run hello-world'''
-* ![image](/uploads/1c4067f364ad8df3dfe0503b88d3c8cc/image.png)
+![image](/uploads/1c4067f364ad8df3dfe0503b88d3c8cc/image.png)
 * 이렇게 적으면  .apk해서 sign을 받아옴 -> 반드시 식별자로 서명이 된 파일만 서비스한다,
 * message digest : 해당되는 것으로 서명을 했는데 digest로 압축을 할때는 hash키로 압축한다.
+* 즉 이미지 가져오려면 암호화해서 해야한당
+![image](/uploads/f80b7fdb86a07da54a1292ec8d127d19/image.png)
+- ㅎㅎㅎㅎ기욥당 git은 힘내~~~~
+
