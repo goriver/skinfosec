@@ -104,7 +104,7 @@
     * Linux는 Docker를 설치하면 서버의 물리 NIC가 docker0이라는 가상 브리지 네트워크로 연결. 
 
 # 제 3장 Docker 설치와 튜토리얼
-''' docker run hello-world'''
+``` docker run hello-world```
 * ![image](/uploads/1c4067f364ad8df3dfe0503b88d3c8cc/image.png)
 * 이렇게 적으면  .apk해서 sign을 받아옴 -> 반드시 식별자로 서명이 된 파일만 서비스한다,
 * message digest : 해당되는 것으로 서명을 했는데 digest로 압축을 할때는 hash키로 압축한다.
