@@ -40,7 +40,7 @@ class AIController:
             message_display(message)
     
     def get_entity_controller(self,email):
-        if email == "" or len(email == 0):
+        if email == "" or len(email) == 0:
             message_display("이메일 형식이 잘못됐습니다.")
         else:
             bm = service.AIService()

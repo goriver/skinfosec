@@ -1,8 +1,8 @@
 import ai_controller
 from domain import AIEntity
 from ai_view import menu_display,input_select_menu, input_email, input_ai_entity, ai_entity_display, message_display
-controller = ai_controller.AIController()
 
+controller = ai_controller.AIController()
 controller.file_read()
 
 while True:
