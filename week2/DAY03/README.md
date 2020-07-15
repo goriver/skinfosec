@@ -27,12 +27,12 @@
 1. 이미지 실행하기
     * docker portforwarding을 해야한다. 왜냐하면 virture box를 사용하기 때문이다.
     * docker desktop 사용시에는 필요없다.
-    * <img src ="/uploads/9916194750dae2886a3836a5e223d81c/image.png" width="40%"height="30%"title="docker설정"alt="docker01"></img>
+    * <img src ="/uploads/9916194750dae2886a3836a5e223d81c/image.png" width="40%" height="30%" title="docker설정" alt="docker01"></img>
     * vm ware에서 설정 > 네트워크 > 고급 > 포트 포워딩 > 다음과 같이 http , https 추가하기
     * ``` docker run --name webserver -d -p 80:80 nginx```
     * docker toolbox에 위와 같이 입력
     * 도커에서 내부적으로 쓰는 identifier을 생성해준다.
-    *  <img src ="/uploads/da03feab75de8834487e047b84bb4ba0/image.png" width="50%"height="30%"title="docker설정"alt="docker01"></img>
+    *  <img src ="/uploads/da03feab75de8834487e047b84bb4ba0/image.png" width="50%" height="30%" title="docker설정" alt="docker01"></img>
     - ps를 하면 위와 같이 설치 내역을 볼 수 있는데, docker ps -a로 치면 설치한 것들 다 나온다.
     - 컨테이너 명 미설정시 : 교수님은 elegant_yalow 나는 peaceful_gagarin으로 출력된다 다 다르다
     - <img src = "/uploads/20500f5ea52fc36a40ceb1d328f66202/image.png" width="50%" height = "30%"></img>
@@ -99,10 +99,9 @@
     * 도커를 이용하면 attach를 이용해 이거저거 쓰기 좋다.
 
     * apt-get -> pip과 같은 기능을 한다. 설치할 때 쓰인다.
-    - ![image](
-    - <img src = "/uploads/da213a7b63a1efe2c8be0b63a263d889/image.png" width="50%",height="30%"></img>
+    - <img src = "/uploads/da213a7b63a1efe2c8be0b63a263d889/image.png" width="50%" height="30%"></img>
     - __앞으로는 운영 및 시스템도 코딩해야한다.__ 위와 같이 `기호를 활용하여 두개의 동작을 한꺼번에 같이 진행할 수 있다.
-    - ![image](/uploads/59880acda5b41241a7e5c6a089886415/image.png)
+    - <img src = "/uploads/59880acda5b41241a7e5c6a089886415/image.png" width="50%" height="40%"></img>
     - 이렇게 쳐야한다. 역시 또 오타나서 다경언니가 해결해주셨당...ㅎㅎㅎㅎ
 * * *
 ### centos
@@ -112,9 +111,7 @@
 
     - 여기서는 나갈려면 :wq : 저장하고 나가기 하기
     * __vi editor__
-    - [vi editor 링크](https://wiki.kldp.org/KoreanDoc/html/Vim_Guide-KLDP/Vim_Guide-KLDP.html)
-
-* <img src ="/uploads/33bbd1dcda33928c2b43812fc61c6ff9/image.png"width="50%"height="30%"></img>
+* <img src ="/uploads/33bbd1dcda33928c2b43812fc61c6ff9/image.png" width="50%" height="30%"></img>
 
 
 
