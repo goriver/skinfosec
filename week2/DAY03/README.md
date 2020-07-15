@@ -4,7 +4,7 @@
 ### 07/15
 * readme.md 마크다운 첫 시작
 * 마크다운은 jupyter의 마크다운 사용하면 편하당
-* 어제) 도커 & 리눅스 명령어
+* *복습) 도커 & 리눅스 명령어*
 
 ## DOCKER 명령
 ### nginx 환경 구축
@@ -106,20 +106,27 @@
 * * *
 ### centos
 * centos는 ubuntu와 다른 문법 사용한다. but 뿌리는 리눅스이다.
-
-
-
     - 여기서는 나갈려면 :wq : 저장하고 나가기 하기
-    * __vi editor__
+    * __vi editor__   
 * <img src ="/uploads/33bbd1dcda33928c2b43812fc61c6ff9/image.png" width="50%" height="30%"></img>
+    - 해당 리눅스 파일과 디렉토리는 한번 공부할 가치가 있다.
+    * chmod
+        - changemod : 접근 권한을 바꾸려면 chmod 명령을 사용
+        - set u id가 셋팅된 파일부터 공격하려고 한다.
+        - 기초 단계에서 따라서 find를 많이 쓴다. --help해서 한번 봐라
+
+### docker 이미지 생성
+* 도커의 설정값 등은 이미지라고 한다.
+    * 컨테이너로부터 이미지 작성
+    - ubuntu, centos 등이 컨테이너입니다. 
+
+#### 정규표현식 
+- 정규표현식은 직관적이고 대부분의 언어가 위를 바탕으로 구성되었다.
+    - [정규표현식 개념](http://www.nextree.co.kr/p4327/)
+    - [정규표현식 test](https://regexr.com/)
 
 
+***
 
-
-
-
-
-
-
-
-                                                                
+Next -> ubuntu로 jdk도 설치해보고, mysql이나 linux 설치 등을 이미지로 commit 해서 만들고 registry에 등록하여 다운받는 법 등등을 배울 것이다.
+                                                         
