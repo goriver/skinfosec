@@ -104,7 +104,7 @@
     * Linux는 Docker를 설치하면 서버의 물리 NIC가 docker0이라는 가상 브리지 네트워크로 연결. 
 
 # 제 3장 Docker 설치와 튜토리얼
-<<<<<<< HEAD:week2/DAY02/README.md
+
 ''' docker run hello-world'''
 ![image](/uploads/1c4067f364ad8df3dfe0503b88d3c8cc/image.png)
 =======
