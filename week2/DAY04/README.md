@@ -25,16 +25,15 @@
     __2) 이미지 실행__
     - ```docker container run --name nodeserver -d -p 80:80 nodeweb:1```
     - 이미지 실행(run)을 80포트에서 실행한다
-<<<<<<< HEAD
+
     - <img src = "/uploads/dbca509f10b21935b36930f3df0a9fa2/image.png"> width = "60%" height="40%"></img>   
 
 
 
     __3) constiner 확인__
-=======
+    
     - <img src = "/uploads/dbca509f10b21935b36930f3df0a9fa2/image.png" width = "60%" height="40%"></img>   
 * 3) constiner 확인
->>>>>>> 74d0ada6f923f403de7a687871cfceb2087a6d8c
     - ```docker exec -it nodeserver bash ```
     - 위와 같은 코드를 입력하면 root@로 떨어진다.
     - ![image](/uploads/230861b5ce7e6d284f7af0ded0d45cd8/image.png)
@@ -58,11 +57,9 @@
     - python보다 빠르고, java보다 쉽다
     - *Go (golang) is a general purpose, higher-level, imperative programming language.*
     - *Go (a.k.a., Golang) is a programming language first developed at Google. It is a statically-typed language with syntax loosely derived from C, but with additional features such as garbage collection, type safety, some dynamic-typing capabilities, additional built-in types (e.g., variable-length arrays and key-value maps), and a large standard library.*
-<<<<<<< HEAD
+
     - <img src = "/uploads/c16fd6253f894aeb8217eb4ea7116541/image.png" height="320%" width = "40%"></img>
-=======
     - <img src = "/uploads/c16fd6253f894aeb8217eb4ea7116541/image.png" height="30%" width = "40%"></img>
->>>>>>> 74d0ada6f923f403de7a687871cfceb2087a6d8c
     - 솔직히 go언어 오늘 youtube에서 보고 배우고 싶다고 생각해서ㅠㅠㅠㅠㅠ 완전 운이 좋았다고 생각한다.
 ***
 
