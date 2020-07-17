@@ -50,10 +50,10 @@
     * 2개 이상의 서로 다른 네트워크 간을 중계하기 우한 통신 장비
 
 ### OS 기초 지식
-![image](/uploads/db2972022aff15918cee80d91623612f/image.png)
+* ![image](/uploads/db2972022aff15918cee80d91623612f/image.png)
     * SHELL : 리눅스 커넬 관리
         -사용자가 명령을 내려서 수행을 하기 위해서는 COMMAND가 필요한데, 해당 COMMAND의 모음을 SHELL이라고 한다.
-    ![image](/uploads/8168dc73b34e1285093a0c65882cf262/image.png)
+    * ![image](/uploads/8168dc73b34e1285093a0c65882cf262/image.png)
     * is-al치면 위 제품이 나온다.
     * 리눅스 용어의 신기함...다경언니 전공분야이다.bbbbb크~bbbbb
     * 
