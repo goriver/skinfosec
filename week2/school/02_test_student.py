@@ -1,4 +1,4 @@
-import student
+# import student
 
 ai_list = [student.Student("ai01","김주희","전자공학"),student.Teacher("T001","최재호","파이썬"),student.Employee("ai01","김주희","전자공학")]
 # ai01=student.Student("ai01","김주희","전자공학")

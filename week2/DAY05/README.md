@@ -92,7 +92,6 @@ dcoker exec -it mongodb bash
         - ReplicaSet은 실행중인 POD를 감시하여 장애와 같은 이슈로 정지된 경우에 해당 POD를 삭제하고, 새로운 POD를 실행시킨다.  
         - *POD와 리플리카에 대한 개념은 꼭 잡기* 
         
-
     * __중요__ ++ 컨테이너는 독립적이라서 자료 공유가 안된다.
     >   > - 따라서 똑같은 형태의 pod가 각각의 노드에 있다고 하더라도, 별도의 컨테이너가 설치될 필요성이 있다.
     * 구글 cloud 컨테이너 관리
@@ -102,5 +101,71 @@ dcoker exec -it mongodb bash
         > 노드 풀은 클러스터 내에서 구성이 모두 동일한 노드 그룹
         > 인스턴스가 많으면 퍼포먼스가 떨어진다. 그래서 인스턴스를 삭제하게 되는데, 그렇게 되는 경우 효율이 떨어진다. 따라서 인스턴스 1개를 생성하는 대신 풀 인스턴스를 제작하게 되는 것이다. 대규모이기 때문에 로드하는데 시간이 걸리지만 풀에서 가져가서 서비스 하게 하면 더 효율적이다. 따라서 pool에서 해당 모듈을 쓰고 다 쓴 경우 반납을 하게 된다. 
         > 예를들어 100명에게 각각의 인스턴스 100개 생성하는 것보다 인스턴스 풀 4개를 만들어서 100명에게 서비스하는게 더 효율적이라는 것이다. 공유하는 데이터가 없다면 전~혀 문제가 되지 않는다.
-        > 
- 
+
+    * 클러스터 생성 
+    - ![image](/uploads/319de08a9cf91cd4d8f31db7de4a8d12/image.png)
+    - 클러스터 생성 파일
+    * compute engine -> vm 인스턴스
+    - 생성된 3개의 클러스터가 확인 가능하다.
+    - 생성된 3개의 클러스터는 노드로 이해하고, masternode는 우리에게 오픈할 필요가 없다. 따라서 우리가 워커 노드 3개에 하면 된다.    
+    * 노드의 구성
+    - ![image](/uploads/ada57e97886cd44f6cd660f62a03d395/image.png)
+    - 해당 페이지는 compute engine > vm 인스턴스
+    - 노드 > pod > 컨테이너
+    * 쿠퍼네틱스 오프라인
+    - [관련문서](https://cloud.google.com/sdk/install?hl=ko)
+    - 구글 sdk(명령줄 인터페이스)를 사용할 수도 있다. 이것을 사용하기 위해서는 아래 vscode의 확장팩을 사용하면 쉽다.   
+    - ![image](/uploads/cbd935f82cc21d0f0633ded1a4dc72e8/image.png)
+    - 상황이 여의치 않을 경우에 cloud에서 제공하는 shell을 활용하면 좋다.
+    - ![image](/uploads/7508c55aea27d9f548de019d63c1b41d/image.png)
+    - 이름의 gcloud 대화형 셀 사용하면 된다. [관련문서](https://cloud.google.com/sdk/docs/scripting-gcloud?hl=ko)
+
+
+* kubernetes 
++ ```kubectl get nodes```
+    - : kuber네틱스의 nodes확인
++ ``` kubectl get nodes -o wide```
+    - : 쿠버네틱스의 노드 한개의 상세 정보를 확인할 수 있다.
++ yaml파일이 있다면 yaml파일을 이용해 인스턴스를 생성함
++ yaml파일이 없으니 직접 쉘에 다음을 입력
+    - ```kubectl create deployment hello-server -image=gcr.io/google-samples/helloapp:1.0```
+    - ```kubectl get pods ``` : 실행중인 pod 검사
+    - ```kubectl get service hello-server``` : 서비스 검사
+    - ![image](/uploads/682bba054bb2556d23978f58c85d5203/image.png)
+    - 이렇게 하면 3개의 클러스터 중 한개를 찾을 수 있다. 
+    - 근데 curl해도 방화벽때문에 안된다. 
+    - ![image](/uploads/6b854287577eaa3592394776437277e6/image.png)
+    - vpc 네트워크 < 방화벽 규칙 만들기 < 이름 정하고, 대상태그, 소스 ip범위 등등 채워넣기
+    - 이미지 삭제법 -> 작업 부하에 들어가서 클러스터 삭제하기
+    - 해당 클러스터 상세보기 중에서 노출중인 서비스의 엔드포인트 찾아서 ip주소 확인하기
+    - ```curl 34.71.68.177``` : 해당 호스팅 주소 확인하기
+    ### 정리
+    * [gke빠른시작](https://cloud.google.com/kubernetes-engine/docs/quickstart?hl=ko)
+    <pre>
+    <code>   
+    kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
+    kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
+    kubectl get pods   
+    kubectl describe services hello-server
+    curl 34.71.68.177
+    </pre>
+    </code>
+    ***
+    * 도커파일로 실행하기 
+    - dockerfile에 다음과 같은 내용 붙여넣기
+    <pre>
+    <code>
+    FROM golang:1.8-alpine
+    ADD . /go/src/hello-app
+    RUN go install hello-app
+
+    FROM alpine:latest
+    COPY --from=0 /go/bin/hello-app .
+    ENV PORT 8080
+    CMD ["./hello-app"]
+    </pre>
+    </code>
+    
+    ***
+
+
