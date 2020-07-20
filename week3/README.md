@@ -159,10 +159,34 @@
 
 ### 논리적 데이터 모델링
 
-* 개념
+* __개념__
     - 개념적 모델링 과정을 통해 만들어진 개념적 구조들을 DBMS가 처리할 수 있는 객체로 생성하는 과정
     - <img src ="/uploads/831702719ccfe4c6e277dd24e86b9cd8/image.png" width = "60%"></img>
     - ENTITY -> TABLE
     - ATTRIBUTE -> COLUMN
     - IDENTIFIER -> PRIMARY-KEY
     - RELATION -> FOREIGN-KEY
+
+* __논리적 데이터의 RDBMS개요__
+    * DATABASE
+        - 한 조직의 여러 응용 시스템에서 공용할 수 있도록 중복되는 데이터를 최소화하여 통합/저장한 운영 데이터 집합을 의미
+    * DBMS(DataBase Management System)
+        - 데이터베이스에서 데이터를 저장.검색.수정하는 데이터베이스 전용 관리 프로그램
+    * RDBMS(Relational DataBase Management System)
+        - 모든 데이터를 2차원 테이블 형태로 표현하고 테이블 사이의 비즈니스 광계에 도추하는 구조를 가진 데이터베이스 유형
+
+    * *software*
+    - [차이점url](https://m.blog.naver.com/PostView.nhn?blogId=xodltus&logNo=220583633081&proxyReferer=https:%2F%2Fwww.google.com%2F)
+        - mysqldb
+            : sql 문장 사용
+        - mongodb 
+            : 몽고 쿼리 문장 사용
+
+* __주요용어__
+    - ![image](/uploads/85d47d952d952111b48f30c609f13f03/image.png)
+    - ![image](/uploads/27671a9db7d92948c199715f761ea772/image.png)
+        * __candidate key [후보키]__ : candidate key는 relation을 구성하는 attribute들 중에서 tuple을 유일하게 식별하기 위해 사용하는 attribute의 부분집합을 말한다.
+        * __primary key [기본키]__ : 후보키에서 선택되어 사용되는 main key이다. NULL 값을 가질 수 없으며 기본키로 정의된 attribute에는 중복된 값이 올 수 없다.
+        * __alternate key [대체키]__ : 후보키중에서 기본키를 제외한 나머지 키들을 말한다.
+        * __super key [슈퍼키]__ : 한 relation에 있는 attribute의 집합으로 구성된 key로 relation을 구성하는 모든 tuple 중 슈퍼키로 구성된 attribute의 집합과 동일한 값은 나타나지 않는다.
+        * __foreign key [외래키]__ : Relationship을 맺고 있는 R1,R2가 있다고 하자. 이 때 R1이 R2의 기본키를 참조하고 있으면 기본키를 참조할 때 기준이 되는 Key 값이 R1에 존재하는데 이를 외래키라고 한다. 외래키로 지정되면 참조 relation의 기본키에 없는 값은 입력할 수 없다.
