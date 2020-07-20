@@ -115,8 +115,8 @@
     - ERD(Entity-Relation Diagram) : 개체 관계도
     - 현실 세계에 존재하는 데이터와 그들 간의 관계를 사람이 이해할 수 있는 형태로 명확하게 표현하기 위해서 가장 널리 사용되고 있는 모델
     - *새발 표기법*
-        - ![image](/uploads/a6af47a6ef5a500a962f335eb86fa5a3/image.png)
-        - ![image](/uploads/c622c58dbc09525f86507f131bb050f6/image.png)
+        - <img src="/uploads/a6af47a6ef5a500a962f335eb86fa5a3/image.png" width = "60%"></img>
+        - <img src="/uploads/c622c58dbc09525f86507f131bb050f6/image.png" width = "60%"></img>
         - [BARKER을 활용한 ERD블로그](https://dlgkstjq623.tistory.com/319)
            *시험 삘 예를 들어서 그림 주고 해석하라는 식* 
 
@@ -134,28 +134,28 @@
     5. 데이터 모형의 안정성을 유지
 
 * 정규화의 장/단점
-    - ![image](/uploads/5c4d2ee9a4b43c369506d70e81e2735a/image.png)
+    - <img src="/uploads/5c4d2ee9a4b43c369506d70e81e2735a/image.png" width = "60%"></img>
     - [제N정규화](https://myeonguni.tistory.com/210)
     - 가장 쉽게 이해하는 법 : SAMPLE DATA를 넣어보기
     1. 제 1정규화
         - ENTITY내에 모든 속성은 반드시 하나의 값을 가져야 함
-        - ![image](/uploads/2a151d60f64a14655dd69cca76114571/image.png)
-        - ![image](/uploads/abb906050f7923df25accc5754fa83cb/image.png)
+        - <img src="/uploads/2a151d60f64a14655dd69cca76114571/image.png" width = "60%"></img>
+        - <img src="/uploads/abb906050f7923df25accc5754fa83cb/image.png" width = "60%"></img>
         - 자격증 데이터를 따로 분류하여 정규화를 진행한다. 
         - 왜냐하면 각각 하나의 값을 가지고 있는데 자격증이고, 나머지는 중복되기 때문이다.
     2. 제 2정규화
         - COMPOSITE KEY의 경우 ENTITY내의 모든 속성은 반드시 COMPOSEITE KEY에 종속 되어야 함
         - 주식별자가 아닌 속성들 중에서 주실별자 전체가 아닌 일부 속성에서 종속된 속성을 찾아 제거
-        - ![image](/uploads/d83caf10cff7cb46537d8568961e33dd/image.png)
-        - ![image](/uploads/377f42e4e4b8df74e25a2748ae392674/image.png)
+        - <img src="/uploads/d83caf10cff7cb46537d8568961e33dd/image.png" width = "60%"></img>
+        - <img src="/uploads/377f42e4e4b8df74e25a2748ae392674/image.png" width = "60%"></img>
         - 해결책은 COMPOSITE KEY로 참조하도록 하면 된다!
         - 
     3. 제 3정규화
         - 주식별자가 아닌 속성들 중에서 종속관계에 있는 속성을 찾아 제거하는 과정  
         - 제 2정규화와 헷갈리면 ㄴㄴ
         - 주식별자가 아닌 속성들 중에서 종속 관계에 있는 속성을 찾아 제거
-        - ![image](/uploads/2306a11e132dff66839266239d1ef724/image.png)
-        - ![image](/uploads/95b6d6d0640d9175f32af5f1357510c3/image.png)
+        - <img src="/uploads/2306a11e132dff66839266239d1ef724/image.png" width = "60%"></img>
+        - <img src="/uploads/95b6d6d0640d9175f32af5f1357510c3/image.png" width = "60%"></img>
 
 ### 논리적 데이터 모델링
 
@@ -190,3 +190,16 @@
         * __alternate key [대체키]__ : 후보키중에서 기본키를 제외한 나머지 키들을 말한다.
         * __super key [슈퍼키]__ : 한 relation에 있는 attribute의 집합으로 구성된 key로 relation을 구성하는 모든 tuple 중 슈퍼키로 구성된 attribute의 집합과 동일한 값은 나타나지 않는다.
         * __foreign key [외래키]__ : Relationship을 맺고 있는 R1,R2가 있다고 하자. 이 때 R1이 R2의 기본키를 참조하고 있으면 기본키를 참조할 때 기준이 되는 Key 값이 R1에 존재하는데 이를 외래키라고 한다. 외래키로 지정되면 참조 relation의 기본키에 없는 값은 입력할 수 없다.
+
+* __DATABASE의 데이터 타입__
+    - <img src ="/uploads/4d87356b8045ac293bd810ad8d62ec30/image.png" width = "60%"></img>
+
+### 물리적 설계
+* __물리적 설계의 개요__
+    - <img src ="/uploads/76bf2e12b29fa4d04fa86636ea1c79d9/image.png" width = "60%"></img>
+    - 최종 설계된 ERD모델에 대해 테이블의 물리적 저장구조에 대한 설계를 한 후 스키마 생성
+    ***
+    - ![image](/uploads/99e5fd0922793388af4f8d1ce15895a6/image.png)
+    - [SQL언어 종류 참고 링크](https://m.blog.naver.com/PostView.nhn?blogId=liccorob&logNo=10152844072&proxyReferer=https:%2F%2Fwww.google.com%2F)
+    - 쿼리 연습 특히 DQL로 하면 좋다.
+    - ![image](/uploads/60f0cfda91b930caaa8ebadc28c16074/image.png)
